@@ -24,7 +24,6 @@ import PyPDF2
 import wandb
 import random
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from google.colab import files
 from langchain.agents import tool
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.chains import ConversationChain
