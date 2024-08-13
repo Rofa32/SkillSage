@@ -46,7 +46,7 @@ from fastapi import FastAPI, UploadFile, File
 
 # Load environment variables from .env file
 load_dotenv()
-
+'''
 if os.getenv("WANDB_MODE") != "disabled":
     # Perform WandB login
     wandb.login(key=os.getenv("WANDB_API_KEY"))
@@ -61,7 +61,7 @@ run = wandb.init(
         "max_new_tokens": 750,
         "temperature": 0.01,
     }
-)
+)'''
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
