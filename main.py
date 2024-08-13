@@ -48,7 +48,7 @@ from fastapi import FastAPI, UploadFile, File
 load_dotenv()
 
 # Perform WandB login
-wandb.login()
+wandb.login(key=os.getenv("WANDB_API_KEY"))
 
 # Initialize WandB session
 run = wandb.init(
