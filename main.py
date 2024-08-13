@@ -47,8 +47,9 @@ from fastapi import FastAPI, UploadFile, File
 # Load environment variables from .env file
 load_dotenv()
 
-# Perform WandB login
-wandb.login(key=os.getenv("WANDB_API_KEY"))
+if os.getenv("WANDB_MODE") != "disabled":
+    # Perform WandB login
+    wandb.login(key=os.getenv("WANDB_API_KEY"))
 
 # Initialize WandB session
 run = wandb.init(
